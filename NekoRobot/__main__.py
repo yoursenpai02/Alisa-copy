@@ -137,6 +137,9 @@ buttons = [
             url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
         )
     ],
+   [
+        InlineKeyboardButton(text="📓 Management", callback_data="help_back"),
+    ],
 ]
 
 HELP_STRINGS = """
