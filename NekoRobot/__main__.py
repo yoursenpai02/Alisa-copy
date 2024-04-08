@@ -141,7 +141,7 @@ buttons = [
         InlineKeyboardButton(text="📓 Management", callback_data="help_back"),
     ],
    [
-        InlineKeyboardButton(text="🎧 Music", callback_data="help_back"),
+        InlineKeyboardButton(text="🎧 Music", callback_data="main_help"),
     ],
 ]
 
