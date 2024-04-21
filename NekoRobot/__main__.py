@@ -141,9 +141,13 @@ buttons = [
         InlineKeyboardButton(text="📓 Management", callback_data="help_back"),
     ],
    [
-        InlineKeyboardButton(text="🎧 Music", callback_data="main_help"),
+        InlineKeyboardButton(text="🎧 Music", callback_data="help_"),
     ],
 ]
+
+help_txt = """**
+**» ˹MIKU˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs** 
+"""
 
 HELP_STRINGS = """
 *Main* commands available:
