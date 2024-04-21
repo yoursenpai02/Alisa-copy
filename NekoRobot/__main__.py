@@ -81,7 +81,7 @@ from NekoRobot import (
 from NekoRobot.modules import ALL_MODULES
 from NekoRobot.modules.helper_funcs.chat_status import is_user_admin
 from NekoRobot.modules.helper_funcs.misc import paginate_modules
-from NekoRobot.core.strings import (music_txt, ai_txt, bass_txt, youtube_txt, 
+from NekoRobot.utiles.strings import (music_txt, ai_txt, bass_txt, youtube_txt, 
 misc_txt, broadcast_txt, checker_txt, devs_txt, instagram_txt)
 
 
