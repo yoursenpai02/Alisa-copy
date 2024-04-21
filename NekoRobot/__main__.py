@@ -149,6 +149,39 @@ help_txt = """**
 **» ˹MIKU˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs** 
 """
 
+
+
+chizuru_buttons = [              
+                [
+                    InlineKeyboardButton("ᴍᴜsɪᴄ", callback_data="music_"),   
+                    InlineKeyboardButton("ᴀɪ", callback_data="ai_"),
+                    InlineKeyboardButton("ʙᴀss", callback_data="bass_")
+                ],
+                [
+                    InlineKeyboardButton("ʏᴏᴜᴛᴜʙᴇ", callback_data="youtube_"),   
+                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="misc_"),
+                    InlineKeyboardButton("ʙʀᴏᴀᴅᴄᴀsᴛ", callback_data="broadcast_")
+                ],
+                [
+                    InlineKeyboardButton("ᴄʜᴇᴄᴋᴇʀ", callback_data="checker_"),   
+                    InlineKeyboardButton("ᴅᴇᴠs", callback_data="devs_"),
+                    InlineKeyboardButton("ɪɴsᴛᴀɢʀᴀᴍ", callback_data="instagram_")
+                ],
+                [
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home_"),
+                    InlineKeyboardButton("⟲ ᴄʟᴏꜱᴇ ⟳", callback_data="close_data")
+                ]
+                ]
+
+
+back_buttons  = [[
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_"),                    
+                ]]
+
+
+
+
+
 HELP_STRINGS = """
 *Main* commands available:
 ➛ /help: PM's you this message.
