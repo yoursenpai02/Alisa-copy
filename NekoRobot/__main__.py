@@ -81,8 +81,6 @@ from NekoRobot import (
 from NekoRobot.modules import ALL_MODULES
 from NekoRobot.modules.helper_funcs.chat_status import is_user_admin
 from NekoRobot.modules.helper_funcs.misc import paginate_modules
-from NekoRobot.utiles.strings import (music_txt, ai_txt, bass_txt, youtube_txt, 
-misc_txt, broadcast_txt, checker_txt, devs_txt, instagram_txt)
 
 
 def get_readable_time(seconds: int) -> str:
@@ -146,40 +144,6 @@ buttons = [
         InlineKeyboardButton(text="🎧 Music", callback_data="help_"),
     ],
 ]
-
-help_txt = """**
-**» ˹MIKU˼ ᴄᴏᴏʟ ᴏʀ ᴇxᴄʟᴜsɪᴠᴇ ғᴇᴀᴛᴜʀᴇs** 
-"""
-
-
-
-chizuru_buttons = [              
-                [
-                    InlineKeyboardButton("ᴍᴜsɪᴄ", callback_data="music_"),   
-                    InlineKeyboardButton("ᴀɪ", callback_data="ai_"),
-                    InlineKeyboardButton("ʙᴀss", callback_data="bass_")
-                ],
-                [
-                    InlineKeyboardButton("ʏᴏᴜᴛᴜʙᴇ", callback_data="youtube_"),   
-                    InlineKeyboardButton("ᴍɪsᴄ", callback_data="misc_"),
-                    InlineKeyboardButton("ʙʀᴏᴀᴅᴄᴀsᴛ", callback_data="broadcast_")
-                ],
-                [
-                    InlineKeyboardButton("ᴄʜᴇᴄᴋᴇʀ", callback_data="checker_"),   
-                    InlineKeyboardButton("ᴅᴇᴠs", callback_data="devs_"),
-                    InlineKeyboardButton("ɪɴsᴛᴀɢʀᴀᴍ", callback_data="instagram_")
-                ],
-                [
-                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home_"),
-                    InlineKeyboardButton("⟲ ᴄʟᴏꜱᴇ ⟳", callback_data="close_data")
-                ]
-                ]
-
-
-back_buttons  = [[
-                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_"),                    
-                ]]
-
 
 
 
