@@ -140,17 +140,10 @@ buttons = [
     [
         InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Source 🌐", url="https://t.me/Isha_Repo_Link"
+            text="Music", callback_data="help_"
         ),
     ],
-    [
-        InlineKeyboardButton(
-            text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
-        ),
-        InlineKeyboardButton(
-            text="📢 Updates", url="https://t.me/senpaibotmanagement"
-        ),
-    ],
+  
 ]
 
 HELP_STRINGS = """
