@@ -142,7 +142,7 @@ buttons = [
                         
                     ],
     [
-                        InlineKeyboardButton(text="Mᴜsɪᴄ help", callback_data="Music help")
+                        InlineKeyboardButton(text="Mᴜsɪᴄhelp", callback_data="Musichelp")
                         
                     ],
    
@@ -926,7 +926,7 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
 
 
 def callback_query(Client, CallbackQuery):
-if CallbackQuery.data == "Music help":
+if CallbackQuery.data == "Musichelp":
 PAGE1_TEXT = "This is the first page"
 PAGE1 BUTTON = [
 InlineKeyboardButton("BACK TO MENU", callback_data="GO TO MENU"),
