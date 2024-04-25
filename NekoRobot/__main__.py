@@ -139,9 +139,13 @@ buttons = [
     [
                         InlineKeyboardButton(text="📕 Mᴀɴᴀɢᴇᴍᴇɴᴛ", callback_data="help_back"),
                         InlineKeyboardButton(text="Mᴜsɪᴄ 🎧", callback_data="Music_")
-                        InlineKeyboardButton(text="Mᴜsɪᴄ help", callback_data="Music help")
+                        
                     ],
-  
+    [
+                        InlineKeyboardButton(text="Mᴜsɪᴄ help", callback_data="Music help")
+                        
+                    ],
+   
 ]
 
   
