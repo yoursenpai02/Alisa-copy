@@ -40,7 +40,7 @@ import traceback
 from sys import argv
 
 from pyrogram import idle
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update, CallbackQuery
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -918,3 +918,15 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
             timeout=60,
 
         )
+
+
+def callback_query(Client, CallbackQuery):
+if CallbackQuery.data == "Music_":
+PAGE1_TEXT = "This is the first page"
+PAGE1 BUTTON = [
+InlineKeyboardButton("BACK TO MENU", callback_data="GO TO MENU"),
+InlineKeyboardButton("READ PAGE 2", callback_data="GO TO PAGE 2")
+]
+CallbackQuery.edit_message_text(
+PAGE1_TEXT, reply_markup = InlineKeyboardMarkup (PAGE1_BUTTON)
+)
