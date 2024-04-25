@@ -725,7 +725,9 @@ def main():
     migrate_handler = MessageHandler(
         Filters.status_update.migrate, migrate_chats, run_async=True
     )
-
+    music_callback_handler = CallbackQueryHandler(
+        Music_about_callback, pattern=r"Music_",run_async=True
+    )
     NEKO_PTB.add_handler(start_handler)
     NEKO_PTB.add_handler(help_handler)
     NEKO_PTB.add_handler(data_callback_handler)
