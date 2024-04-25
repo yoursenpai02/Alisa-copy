@@ -807,7 +807,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
                     ],
                 
             ),
-        )
+        
     elif query.data == "Music_admin":
         query.message.edit_caption(f"*» ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ «*"
             f"""
