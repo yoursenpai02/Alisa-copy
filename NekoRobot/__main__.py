@@ -702,88 +702,6 @@ def migrate_chats(update: Update):
         with contextlib.suppress(KeyError, AttributeError):
             mod.__migrate__(old_chat, new_chat)
     LOGGER.info("Successfully migrated!")
-
-
-def main():
-    test_handler = CommandHandler("test", test, run_async=True)
-    start_handler = CommandHandler("start", start, run_async=True)
-
-    help_handler = CommandHandler("help", get_help, run_async=True)
-    help_callback_handler = CallbackQueryHandler(
-        help_button, pattern=r"help_.*", run_async=True
-    )
-
-    settings_handler = CommandHandler("settings", get_settings)
-    settings_callback_handler = CallbackQueryHandler(
-        settings_button, pattern=r"stngs_", run_async=True
-    )
-
-    data_callback_handler = CallbackQueryHandler(
-        neko_callback_data, pattern=r"neko_", run_async=True
-    )
-    donate_handler = CommandHandler("donate", donate, run_async=True)
-    migrate_handler = MessageHandler(
-        Filters.status_update.migrate, migrate_chats, run_async=True
-    )
-    music_callback_handler = CallbackQueryHandler(
-        Music_about_callback, pattern=r"Music_",run_async=True
-    )
-   
-    NEKO_PTB.add_handler(start_handler)
-    NEKO_PTB.add_handler(help_handler)
-    NEKO_PTB.add_handler(data_callback_handler)
-    NEKO_PTB.add_handler(settings_handler)
-    NEKO_PTB.add_handler(help_callback_handler)
-    NEKO_PTB.add_handler(settings_callback_handler)
-    NEKO_PTB.add_handler(migrate_handler)
-    NEKO_PTB.add_handler(donate_handler)
-    NEKO_PTB.add_handler(music_callback_handler)
-   
-    NEKO_PTB.add_error_handler(error_callback)
-
-    if WEBHOOK:
-        LOGGER.info("Using webhooks.")
-        updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
-
-        if CERT_PATH:
-            updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
-        else:
-            updater.bot.set_webhook(url=URL + TOKEN)
-
-    else:
-        LOGGER.info(
-            f"Neko started, Using long polling. | BOT: [@{NEKO_PTB.bot.username}]"
-        )
-        updater.start_polling(
-            timeout=15,
-            read_latency=4,
-            drop_pending_updates=True,
-            allowed_updates=Update.ALL_TYPES,
-        )
-
-    if len(argv) in {1, 3, 4}:
-        tbot.run_until_disconnected()
-
-    else:
-        tbot.disconnect()
-    updater.idle()
-
-
-"""
-try:
-    ubot.start()
-except BaseException:
-    print("Userbot Error! Have you added a STRING_SESSION in deploying??")
-    sys.exit(1)
-"""
-
-if __name__ == "__main__":
-    LOGGER.info(f"Successfully loaded modules: {str(ALL_MODULES)}")
-    tbot.start(bot_token=TOKEN)
-    pgram.start()
-    main()
-    idle()
-
 def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Music_":
@@ -924,3 +842,84 @@ c ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
             timeout=60,
 
         )
+
+def main():
+    test_handler = CommandHandler("test", test, run_async=True)
+    start_handler = CommandHandler("start", start, run_async=True)
+
+    help_handler = CommandHandler("help", get_help, run_async=True)
+    help_callback_handler = CallbackQueryHandler(
+        help_button, pattern=r"help_.*", run_async=True
+    )
+
+    settings_handler = CommandHandler("settings", get_settings)
+    settings_callback_handler = CallbackQueryHandler(
+        settings_button, pattern=r"stngs_", run_async=True
+    )
+
+    data_callback_handler = CallbackQueryHandler(
+        neko_callback_data, pattern=r"neko_", run_async=True
+    )
+    donate_handler = CommandHandler("donate", donate, run_async=True)
+    migrate_handler = MessageHandler(
+        Filters.status_update.migrate, migrate_chats, run_async=True
+    )
+    music_callback_handler = CallbackQueryHandler(
+        Music_about_callback, pattern=r"Music_",run_async=True
+    )
+   
+    NEKO_PTB.add_handler(start_handler)
+    NEKO_PTB.add_handler(help_handler)
+    NEKO_PTB.add_handler(data_callback_handler)
+    NEKO_PTB.add_handler(settings_handler)
+    NEKO_PTB.add_handler(help_callback_handler)
+    NEKO_PTB.add_handler(settings_callback_handler)
+    NEKO_PTB.add_handler(migrate_handler)
+    NEKO_PTB.add_handler(donate_handler)
+    NEKO_PTB.add_handler(music_callback_handler)
+   
+    NEKO_PTB.add_error_handler(error_callback)
+
+    if WEBHOOK:
+        LOGGER.info("Using webhooks.")
+        updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
+
+        if CERT_PATH:
+            updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
+        else:
+            updater.bot.set_webhook(url=URL + TOKEN)
+
+    else:
+        LOGGER.info(
+            f"Neko started, Using long polling. | BOT: [@{NEKO_PTB.bot.username}]"
+        )
+        updater.start_polling(
+            timeout=15,
+            read_latency=4,
+            drop_pending_updates=True,
+            allowed_updates=Update.ALL_TYPES,
+        )
+
+    if len(argv) in {1, 3, 4}:
+        tbot.run_until_disconnected()
+
+    else:
+        tbot.disconnect()
+    updater.idle()
+
+
+"""
+try:
+    ubot.start()
+except BaseException:
+    print("Userbot Error! Have you added a STRING_SESSION in deploying??")
+    sys.exit(1)
+"""
+
+if __name__ == "__main__":
+    LOGGER.info(f"Successfully loaded modules: {str(ALL_MODULES)}")
+    tbot.start(bot_token=TOKEN)
+    pgram.start()
+    main()
+    idle()
+
