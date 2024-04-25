@@ -728,6 +728,7 @@ def main():
     music_callback_handler = CallbackQueryHandler(
         Music_about_callback, pattern=r"Music_",run_async=True
     )
+   
     NEKO_PTB.add_handler(start_handler)
     NEKO_PTB.add_handler(help_handler)
     NEKO_PTB.add_handler(data_callback_handler)
@@ -736,7 +737,8 @@ def main():
     NEKO_PTB.add_handler(settings_callback_handler)
     NEKO_PTB.add_handler(migrate_handler)
     NEKO_PTB.add_handler(donate_handler)
-
+    NEKO_PTB.add_handler(music_callback_handler)
+   
     NEKO_PTB.add_error_handler(error_callback)
 
     if WEBHOOK:
