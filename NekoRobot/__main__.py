@@ -132,17 +132,14 @@ NEKO_STICKERS = (
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add {BOT_NAME} To Your Group",
-            url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
+            text="Add {} to Your Group".format(BOT_NAME),
+            url="https://telegram.dog/{}/startgroup=true".format(BOT_USERNAME)
         )
     ],
     [
-                        InlineKeyboardButton(text="📕 Mᴀɴᴀɢᴇᴍᴇɴᴛ", callback_data="help_back"),
-                        InlineKeyboardButton(text="Mᴜsɪᴄ 🎧", callback_data="Music_")
-                        
-                    ],
-
-   
+        InlineKeyboardButton(text="📕 Mᴀɴᴀɢᴇᴍᴇɴᴛ", callback_data="help_back"),
+        InlineKeyboardButton(text="Mᴜsɪᴄ 🎧", callback_data="Music_")
+    ]
 ]
 
   
